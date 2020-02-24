@@ -10,7 +10,7 @@ docker push sorinlacriteanu/multi-client:$SHA
 docker push sorinlacriteanu/multi-server:$SHA
 docker push sorinlacriteanu/multi-worker:$SHA
 
-kubectl apply -f k8s
+kubectl apply -f k8s --validate=false
 
 kubectl set image deployments/server-deployment server=sorinlacriteanu/multi-server:$SHA
 kubectl set image deployments/client-deployment client=sorinlacriteanu/multi-client:$SHA

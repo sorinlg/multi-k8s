@@ -18,3 +18,5 @@ spec:
         domains:
           - lacriteanu.ro
           - www.lacriteanu.ro
+
+#cert-manager.io/cluster-issuer: "letsencrypt-prod"
