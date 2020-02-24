@@ -13,8 +13,8 @@ spec:
     - www.lacriteanu.ro
   acme:
     config:
-      http01:
-        ingressClass: nginx
-      domains:
-        - lacriteanu.ro
-        - www.lacriteanu.ro
+      - http01:
+          ingressClass: nginx
+        domains:
+          - lacriteanu.ro
+          - www.lacriteanu.ro
