@@ -1,0 +1,20 @@
+apiVersion: certmanager.k8s.io/v1alpha2
+kind: Certificate
+metadata:
+  name: lacriteanu-ro-tls
+spec:
+  secretName: lacriteanu-ro
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: lacriteanu.ro
+  dnsNames:
+    - lacriteanu.ro
+    - www.lacriteanu.ro
+  acme:
+    config:
+      http01:
+        ingressClass: nginx
+      domains:
+        - lacriteanu.ro
+        - www.lacriteanu.ro
